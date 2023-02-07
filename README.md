@@ -36,8 +36,16 @@ Some of the tooling I use/used for package installation is in the list bellow:
 You can add new packages as `*.scm` (scheme) files under `bin-guix/packages`. 
 See the definitions for the other packags as examples.
 
-Once you added a new package, test it works locally then commit and push.
+Before we begin the package, download a release and get the hash:
 
+``` shell
+# Use `guix download` to fetch file and compute hash
+guix download  https://github.com/oras-project/oras/releases/download/v0.16.0/oras_0.16.0_linux_amd64.tar.gz  --hash=sha256
+
+```
+
+Then you can create your `bin-guix/packages/<name>.scm` module that contains the package definition.
+Once you added a new package, test it works locally then commit and push.
 
 ``` shell
 # Build a package from definition, keeping directory if build fails
