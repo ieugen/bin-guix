@@ -15,6 +15,7 @@
              (sha256
               (base32 "0zc2xxny348d5yp98q4l57dsfgsd95xa636zkpfjdp3caqgjxbj5"))))
     (build-system copy-build-system)
+    (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
      `(#:install-plan '(("oras" "bin/")
                         ;;("LICENSE" "share/doc/LICENSE")
