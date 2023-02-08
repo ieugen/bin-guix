@@ -17,7 +17,10 @@
               (base32 "0jax7gyd8dgb9yjm0y4hbv3ydd5fbpxd8ry8cda8drhvkkiqj127"))))
     (build-system copy-build-system)
     (arguments
-     `(#:install-plan '(("dtlv" "bin/"))))
+     `(#:install-plan '(("dtlv" "bin/"))
+       ;; datalevin fails w/ RUNPATH error because of shared libraries
+       ;; remove this once we have static binary
+       #:validate-runpath? #f))
     (native-inputs
      `(("unzip" ,unzip)))
     (inputs
