@@ -54,6 +54,9 @@ guix build -L . -K babashka
 # Force rebuild a package
 guix build --check --no-grafts babashka
 
+# To "clean" remove the package from guix run:
+guix gc -D <STORE-PATH>
+
 ```
 
 https://www.alexandrostheodotou.com/guix-packagers-guide.html
