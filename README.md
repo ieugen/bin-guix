@@ -21,6 +21,8 @@ Some of the tooling I use/used for package installation is in the list bellow:
 - docker containers - mostly for services but also for some cli apps 
 - manual installation scripts
 
+NOTE: Most packaged apps are (should be) statically linked to work without issues. This is the case with most apps available as a single binary.
+
  I faced issues when working with other people of setting up new computers or servers.
  It's a lot of work to keep every system with all the required tools installed and up to date.
  
