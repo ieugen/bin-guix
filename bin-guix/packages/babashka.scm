@@ -2,7 +2,7 @@
    #:use-module (guix packages)
    #:use-module (guix download)
    #:use-module (guix build-system copy)
-   #:use-module (guix licenses))
+   #:use-module ((guix licenses) #:prefix licenses:))
 
 (define-public babashka
   (package
@@ -21,4 +21,4 @@
     (synopsis "Native, fast starting Clojure interpreter for scripting")
     (description "Babashka is a native Clojure interpreter for scripting with fast startup. Its main goal is to leverage Clojure in places where you would be using bash otherwise.")
     (home-page "https://babashka.org/")
-    (license epl1.0)))
+    (license licenses:epl1.0)))

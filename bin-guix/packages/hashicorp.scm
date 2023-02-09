@@ -2,7 +2,7 @@
    #:use-module (guix packages)
    #:use-module (guix download)
    #:use-module (guix build-system copy)
-   #:use-module (guix licenses)
+   #:use-module ((guix licenses) #:prefix licenses:)
    #:use-module (gnu packages compression))
 
 (define-public vault
@@ -24,7 +24,7 @@
     (synopsis "A tool for secrets management, encryption as a service, and privileged access management")
     (description "Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.")
     (home-page "https://www.vaultproject.io/")
-    (license mpl2.0)))
+    (license licenses:mpl2.0)))
 
 (define-public terraform
   (package
@@ -46,7 +46,7 @@
     (synopsis "Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently.")
     (description "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.")
     (home-page "https://www.terraform.io/")
-    (license mpl2.0)))
+    (license licenses:mpl2.0)))
 
 (define-public packer
   (package
@@ -68,4 +68,4 @@
     (synopsis "Packer is a tool for building identical machine images for multiple platforms from a single source configuration.")
     (description "Packer is lightweight, runs on every major operating system, and is highly performant, creating machine images for multiple platforms in parallel.")
     (home-page "https://www.packer.io/")
-    (license mpl2.0)))
+    (license licenses:mpl2.0)))

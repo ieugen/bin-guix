@@ -2,7 +2,7 @@
    #:use-module (guix packages)
    #:use-module (guix download)
    #:use-module (guix build-system copy)
-   #:use-module (guix licenses))
+   #:use-module ((guix licenses) #:prefix licenses:))
 
 (define-public oras
   (package
@@ -23,4 +23,4 @@
     (synopsis "OCI registry client - managing content like artifacts, images, packages")
     (description "ORAS works similarly to tools you may already be familiar with, such as docker. It allows you to push (upload) and pull (download) things to and from an OCI Registry, and also handles login (authentication) and token flow (authorization). What ORAS does differently is shift the focus from container images to other types of artifacts.")
     (home-page "https://oras.land/cli")
-    (license asl2.0)))
+    (license licenses:asl2.0)))

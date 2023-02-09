@@ -2,7 +2,7 @@
    #:use-module (guix packages)
    #:use-module (guix download)
    #:use-module (guix build-system copy)
-   #:use-module (guix licenses))
+   #:use-module ((guix licenses) #:prefix licenses:))
 
 (define-public gum
   (package
@@ -24,4 +24,4 @@
     (synopsis "A tool for glamorous shell scripts ribbon")
     (description "Gum provides highly configurable, ready-to-use utilities to help you write useful shell scripts and dotfiles aliases with just a few lines of code.")
     (home-page "https://github.com/charmbracelet/gum")
-    (license expat)))
+    (license licenses:expat)))
