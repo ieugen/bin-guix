@@ -2,7 +2,7 @@
    #:use-module (guix packages)
    #:use-module (guix download)
    #:use-module (guix build-system copy)
-   #:use-module (guix licenses)
+   #:use-module ((guix licenses) #:prefix licenses:)
    #:use-module (gnu packages compression))
 
 (define-public datalevin
@@ -28,4 +28,4 @@
     (synopsis "A simple, fast and versatile Datalog database")
     (description "The rationale is to have a simple, fast and open source Datalog query engine running on durable storage. It is our observation that many developers prefer the flavor of Datalog popularized by Datomic® over any flavor of SQL, once they get to use it. Perhaps it is because Datalog is more declarative and composable than SQL, e.g. the automatic implicit joins seem to be its killer feature.")
     (home-page "https://github.com/juji-io/datalevin")
-    (license epl1.0)))
+    (license licenses:epl1.0)))

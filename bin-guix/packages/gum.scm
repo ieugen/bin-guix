@@ -2,7 +2,7 @@
    #:use-module (guix packages)
    #:use-module (guix download)
    #:use-module (guix build-system copy)
-   #:use-module (guix licenses))
+   #:use-module ((guix licenses) #:prefix licenses:))
 
 (define-public gum
   (package
@@ -15,6 +15,7 @@
              (sha256
               (base32 "0jvsjamz8rlrjymcbmd8wi7b6a0bn10ckd437zj9na5a8x56ig4p"))))
     (build-system copy-build-system)
+    (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
      `(#:install-plan '(("../gum" "bin/")
                         ;; we should install the other provided completions
@@ -23,4 +24,4 @@
     (synopsis "A tool for glamorous shell scripts ribbon")
     (description "Gum provides highly configurable, ready-to-use utilities to help you write useful shell scripts and dotfiles aliases with just a few lines of code.")
     (home-page "https://github.com/charmbracelet/gum")
-    (license expat)))
+    (license licenses:expat)))
