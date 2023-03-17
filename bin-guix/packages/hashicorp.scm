@@ -29,14 +29,14 @@
 (define-public terraform
   (package
     (name "terraform")
-    (version "1.4.1")
+    (version "1.4.2")
     ;;TODO check signature file https://releases.hashicorp.com/terraform/1.3.7/terraform_1.3.7_SHA256SUMS.sig
     (source (origin
              (method url-fetch)
              (uri (string-append "https://releases.hashicorp.com/terraform/"
                                  version "/terraform_" version "_linux_amd64.zip"))
              (sha256
-              (base32 "08a4sg13ykmw7r2j4v60mi95lpf632fflhrnrf7fm38na9kkx7wy"))))
+              (base32 "0cd944i0lfrlhcanzbhhsrv03dhma5wgf7cxh9r58czm0hys6g4z"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
