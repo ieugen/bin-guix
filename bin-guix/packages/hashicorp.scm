@@ -8,13 +8,13 @@
 (define-public vault
   (package
     (name "vault")
-    (version "1.12.2")
+    (version "1.13.0")
     (source (origin
              (method url-fetch)
              (uri (string-append "https://releases.hashicorp.com/vault/"
                    version "/vault_" version "_linux_amd64.zip"))
              (sha256
-              (base32 "0rxsxnm94pfq5mp1m54air2r0lpyx7ang8smliz7m9vpwcyi8v0i"))))
+              (base32 "17dgb652mr1jalwy8na16bhhbsqk2jlm26l69wn39fw3sdnwxhb9"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
@@ -29,14 +29,14 @@
 (define-public terraform
   (package
     (name "terraform")
-    (version "1.3.7")
+    (version "1.8.6")
     ;;TODO check signature file https://releases.hashicorp.com/terraform/1.3.7/terraform_1.3.7_SHA256SUMS.sig
     (source (origin
              (method url-fetch)
              (uri (string-append "https://releases.hashicorp.com/terraform/"
                                  version "/terraform_" version "_linux_amd64.zip"))
              (sha256
-              (base32 "07h2wdycd689gjiak13jw4idn8xb2d9hhmpy2fbsipqmxr6iikxq"))))
+              (base32 "0cd944i0lfrlhcanzbhhsrv03dhma5wgf7cxh9r58czm0hys6g4z"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
@@ -51,14 +51,14 @@
 (define-public packer
   (package
     (name "packer")
-    (version "1.8.5")
+    (version "1.8.6")
     ;;TODO check signature file https://releases.hashicorp.com/packer/1.8.5/packer_1.8.5_SHA256SUMS.sig
     (source (origin
              (method url-fetch)
              (uri (string-append "https://releases.hashicorp.com/packer/"
                                  version "/packer_" version "_linux_amd64.zip"))
              (sha256
-              (base32 "1wpfxnwxvlqj4140dgz7ijqrlx62n8mnsbl41h0rdincwljaf5qz"))))
+              (base32 "1bl5nckj9gqzdmkfaxjbsi4mv78ka5liiv9nin8n5slaawg43l2p"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
