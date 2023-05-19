@@ -51,14 +51,14 @@
 (define-public packer
   (package
     (name "packer")
-    (version "1.8.6")
+    (version "1.8.7")
     ;;TODO check signature file https://releases.hashicorp.com/packer/1.8.5/packer_1.8.5_SHA256SUMS.sig
     (source (origin
              (method url-fetch)
              (uri (string-append "https://releases.hashicorp.com/packer/"
                                  version "/packer_" version "_linux_amd64.zip"))
              (sha256
-              (base32 "1bl5nckj9gqzdmkfaxjbsi4mv78ka5liiv9nin8n5slaawg43l2p"))))
+              (base32 "0vwlsm1s57pxxcfy2ykc0s4kwjmz1h4fkw1sgrlikdl2z0dz5lih"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
