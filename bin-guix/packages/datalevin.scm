@@ -8,13 +8,13 @@
 (define-public datalevin
   (package
     (name "datalevin")
-    (version "0.8.6")
+    (version "0.8.16")
     (source (origin
              (method url-fetch)
              (uri (string-append "https://github.com/juji-io/datalevin/releases/download/"
                                  version "/dtlv-" version "-ubuntu-latest-amd64.zip"))
              (sha256
-              (base32 "0vdwgbsjggr76x45srm5bn2w30gs09x19kmxdikacklf1zyg87am"))))
+              (base32 "0raaczrggyrmxqc6nbiq7a30h7ikvikxs9fr0d0d3m55rpqwgc50"))))
     (build-system copy-build-system)
     (arguments
      `(#:install-plan '(("dtlv" "bin/"))
