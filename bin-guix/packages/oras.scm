@@ -7,13 +7,13 @@
 (define-public oras
   (package
     (name "oras")
-    (version "1.0.0-rc.1")
+    (version "1.0.0")
     (source (origin
              (method url-fetch)
              (uri (string-append "https://github.com/oras-project/oras/releases/download/v"
                                  version "/oras_" version "_linux_amd64.tar.gz"))
              (sha256
-              (base32 "0flfsc67kskci2hz8rnyc062f9d5795p0hra00cpga5hshdg8nch"))))
+              (base32 "0cr1xlvqky28fl3ik8gqc9ad21piiq74q2f5vyqmw3as3vmcjcw5"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
