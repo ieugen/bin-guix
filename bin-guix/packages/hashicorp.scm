@@ -8,13 +8,13 @@
 (define-public vault
   (package
     (name "vault")
-    (version "1.13.0")
+    (version "1.13.2")
     (source (origin
              (method url-fetch)
              (uri (string-append "https://releases.hashicorp.com/vault/"
                    version "/vault_" version "_linux_amd64.zip"))
              (sha256
-              (base32 "17dgb652mr1jalwy8na16bhhbsqk2jlm26l69wn39fw3sdnwxhb9"))))
+              (base32 "0g4vx7gvbb7rsbly490ddihdk5c882jb8r11adydx0c3vrwh54zp"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
