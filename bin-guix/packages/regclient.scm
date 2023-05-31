@@ -22,12 +22,11 @@
      `(#:install-plan '(("regbot" "bin/"))
        #:phases (modify-phases %standard-phases
                   (add-after 'unpack 'make-file-exec
-                    ;; regbot is not executable
                     (lambda _
                       (for-each
                        (lambda (file)
                          (let ((stat (lstat file)))
-                           (display (string-append "File-> " file "\n"))
+                           ;;(display (string-append "File-> " file "\n"))
                            (chmod file #o755)))
                        (find-files "." #:directories? #f)))))))
     (synopsis "regbot is a scripting tool on top of the regclient API")
@@ -53,12 +52,11 @@
      `(#:install-plan '(("regctl" "bin/"))
        #:phases (modify-phases %standard-phases
                   (add-after 'unpack 'make-file-exec
-                    ;; regctl is not executable
                     (lambda _
                       (for-each
                        (lambda (file)
                          (let ((stat (lstat file)))
-                           (display (string-append "File-> " file "\n"))
+                           ;;(display (string-append "File-> " file "\n"))
                            (chmod file #o755)))
                        (find-files "." #:directories? #f)))))))
     (synopsis "regctl is a CLI interface to the regclient library.")
@@ -83,12 +81,11 @@
      `(#:install-plan '(("regsync" "bin/"))
        #:phases (modify-phases %standard-phases
                   (add-after 'unpack 'make-file-exec
-                    ;; regctl is not executable
                     (lambda _
                       (for-each
                        (lambda (file)
                          (let ((stat (lstat file)))
-                           (display (string-append "File-> " file "\n"))
+                           ;;(display (string-append "File-> " file "\n"))
                            (chmod file #o755)))
                        (find-files "." #:directories? #f)))))))
     (synopsis "regsync is an image mirroring tool. It will copy images between two locations")
