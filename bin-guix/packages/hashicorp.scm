@@ -27,7 +27,7 @@
     (home-page "https://www.consul.io/")
     (license licenses:mpl2.0)))
 
-(define-public packer
+(define-public packr
   (package
     (name "packer")
     (version "1.8.7")
@@ -74,13 +74,13 @@
 (define-public vault
   (package
     (name "vault")
-    (version "1.13.2")
+    (version "1.14.1")
     (source (origin
              (method url-fetch)
              (uri (string-append "https://releases.hashicorp.com/vault/"
                    version "/vault_" version "_linux_amd64.zip"))
              (sha256
-              (base32 "0g4vx7gvbb7rsbly490ddihdk5c882jb8r11adydx0c3vrwh54zp"))))
+              (base32 "18vyymcz62ilfxd15sf8jjfrdahqq17w81nj4djpzq1xzhnl6cb0"))))
     (build-system copy-build-system)
     (supported-systems '("x86_64-linux" "i686-linux"))
     (arguments
