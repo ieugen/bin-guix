@@ -32,7 +32,34 @@ NOTE: Most packaged apps are (should be) statically linked to work without issue
  
  I believe that Guix is a tool that can be used for such a thing.
  
- 
+
+## How to use this channel
+
+- Add bin-guix channel to your list of channels
+- Run `guix pull`
+- Install packages
+
+On Debian, my channels configuration file is in `$HOME/.config/guix/channels.scm`
+It might be different on your distribution.
+When in doubt see https://guix.gnu.org/manual/en/html_node/Specifying-Additional-Channels.html 
+
+I believe the order is important and since bin-guix is before `%default-channels` packages 
+will be pulled from bin-guix first if they have the same name.
+
+```scheme
+(cons* 
+       ;;  My other channels here
+       (channel
+        (name 'bin-guix)
+        (url "https://github.com/ieugen/bin-guix")
+        (branch "main")
+        ;;Enable signature verification:
+        ;;TBA
+        )
+       %default-channels)
+```
+
+
 ## Development
 
 You can add new packages as `*.scm` (scheme) files under `bin-guix/packages`. 
