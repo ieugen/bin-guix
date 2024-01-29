@@ -8,12 +8,12 @@
 (define-public jena
   (package
    (name "jena")
-   (version "4.9.0")
+   (version "4.10.0")
    (source (origin
             (method url-fetch)
             (uri (string-append "https://archive.apache.org/dist/jena/binaries/apache-jena-" version ".tar.gz"))
             (sha256
-             (base32 "1s1976p8rfbmix8yk2k1dmgv7xfiglxjj63gwj63qqmh89s08jwi"))))
+             (base32 "1qs7rfm133cip6vyrn6max4lwsfsni1przia739glnbnj63h4s8v"))))
    (build-system copy-build-system)
    (supported-systems '("x86_64-linux" "i686-linux"))
    (arguments
