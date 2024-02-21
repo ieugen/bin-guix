@@ -8,18 +8,18 @@
 (define-public javy
   (package
    (name "javy")
-   (version "1.3.0")
+   (version "1.4.0")
    (source (origin
             (method url-fetch)
             (uri (string-append "https://github.com/bytecodealliance/javy/releases/download/v"
                                 version "/javy-x86_64-linux-v" version ".gz"))
             (sha256
-             (base32 "0sn282dc8a2x9nnv4cybjzf4vql30c6whhl9nqirjgivzjfvdq0i"))))
+             (base32 "1pydsqf9nq8q965vv6mxcx6kjlb3hksphnvl2fi05djxq17k74im"))))
    (build-system copy-build-system)
    (supported-systems '("x86_64-linux"))
    (arguments
     ;; I have no idea how to unpack the archive as javy (FileRoller does this)
-    `(#:install-plan '(("javy-x86_64-linux-v1.3.0" "bin/javy"))
+    `(#:install-plan '(("javy-x86_64-linux-v1.4.0" "bin/javy"))
       ;; Requires libstdc++ and ld and libgcc - we are ignoring those
       ;; Maybe we can fix it by depending on gcc:lib
       #:validate-runpath? #f
