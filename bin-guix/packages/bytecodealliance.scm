@@ -44,13 +44,13 @@
 (define-public wasmtime
   (package
    (name "wasmtime")
-   (version "17.0.0")
+   (version "18.0.1")
    (source (origin
             (method url-fetch)
             (uri (string-append "https://github.com/bytecodealliance/wasmtime/releases/download/v"
                                 version "/wasmtime-v" version "-x86_64-linux.tar.xz"))
             (sha256
-             (base32 "1xqgycjxnrc3a974ci3ssyhhxsq416lm0saqnf281lhb1clfa6fl"))))
+             (base32 "1bc0lzni6q17a0daxdm2cc43s40s0vw153wgnqk197mbgjac0lcr"))))
    (build-system copy-build-system)
    (supported-systems '("x86_64-linux"))
    (arguments
