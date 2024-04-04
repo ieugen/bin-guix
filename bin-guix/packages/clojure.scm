@@ -21,14 +21,14 @@
 (define-public clojure-tools
   (package
    (name "clojure-tools")
-   (version "1.11.1.1435")
+   (version "1.11.2.1446")
    (source
     (origin
      (method url-fetch)
      (uri (string-append "https://download.clojure.org/install/clojure-tools-"
                          version
                          ".tar.gz"))
-     (sha256 (base32 "1h4v762agzhnrqs3mj7a84xlw51xv6jh8mvlc5cc83q4n9wwabs5"))
+     (sha256 (base32 "0wggjbbzvds9jhx2qw3wyxdw0n0605awd5mp7kczh3cmzjqgyzma"))
      ;; Remove AOT compiled JAR.  The other JAR only contains uncompiled
      ;; Clojure source code.
      (snippet
@@ -79,7 +79,7 @@ Clojure repl, use Clojure and Java libraries, and start Clojure programs.")
 (define-public clojure-tools-deps
   (package
    (name "clojure-tools-deps")
-   (version "0.18.1398")
+   (version "0.19.1417")
    (home-page "https://github.com/clojure/tools.deps")
    (source (origin
             (method git-fetch)
@@ -89,7 +89,7 @@ Clojure repl, use Clojure and Java libraries, and start Clojure programs.")
             (file-name (git-file-name name version))
             (sha256
              (base32
-              "00xks4kafbzif3ybr3lbpv41m4by2s7n3fghzmmss5pz3s3z9s28"))))
+              "1hdv0wv92gn305jkxkbmhmpdl1i9fx5qx77q1hjr4y66kwaz5x53"))))
    (build-system clojure-build-system)
    (arguments
     `(#:source-dirs '("src/main/clojure" "src/main/resources")
