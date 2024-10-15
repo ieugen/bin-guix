@@ -9,17 +9,17 @@
 (define-public nitrokey-app2
   (package
    (name "nitrokey-app2")
-   (version "2.1.5")
+   (version "2.3.2")
    (source (origin
             (method url-fetch)
             (uri (string-append "https://github.com/Nitrokey/nitrokey-app2/releases/download/v"
-                                version "/nitrokey-app-v" version "-x64-linux-binary.tar.gz"))
+                                version "/nitrokey-app-v" version "-x64-linux-binary"))
             (sha256
-             (base32 "00byxgycr0c71jqar2g3b9631px2ymnmhz5vpfrshi8yqqa0dzj2"))))
+             (base32 "1rsbr1qmd9dfalp6yayq15n53qg3s3mfi8l956xn6mzdk288xrni"))))
    (build-system copy-build-system)
    (supported-systems '("x86_64-linux" "i686-linux"))
    (arguments
-    `(#:install-plan '(("nitrokey-app-v2.1.5-x64-linux-binary" "bin/nitrokey-app2"))
+    `(#:install-plan '(("nitrokey-app-v2.3.2-x64-linux-binary" "bin/nitrokey-app2"))
       #:validate-runpath? #f
       #:phases (modify-phases %standard-phases
                               (add-after 'unpack 'make-file-exec
