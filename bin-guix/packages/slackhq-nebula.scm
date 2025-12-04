@@ -9,13 +9,13 @@
 (define-public nebula
   (package
    (name "nebula")
-   (version "1.9.2")
+   (version "1.10.0")
    (source (origin
             (method url-fetch)
             (uri (string-append "https://github.com/slackhq/nebula/releases/download/v"
                                 version "/nebula-linux-amd64.tar.gz"))
             (sha256
-             (base32 "01cp943myzwchb62kmzm4jf20mq3fn58j17y05jznl3bka2kh4kz"))))
+             (base32 "08sy7svz39ba3hilg0936kxjc7wa0sk6qqikcfmyxk4i61l9igvr"))))
    (build-system copy-build-system)
    (arguments
     `(#:install-plan '(("nebula" "bin/")
